@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy on docker image
 
 on:
   push:
@@ -13,6 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: docker build . -t rampunit/react-cicd
-    #- run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-sdin
     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
     - run: docker push rampunit/react-cicd:latest
