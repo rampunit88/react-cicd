@@ -28,7 +28,15 @@ jobs:
       - name: Install dependencies
         #uses: bahmutov/npm-install@v1
         run: npm install
-        
+      
+      - name: Run SonarQube Scanner
+        run: |
+          npm install -g sonarqube-scanner
+          sonar-scanner
+        env:
+          SONAR_HOST_URL: http://localhost:9000
+          SONAR_LOGIN: ${{ secrets.SONARQUBE_TOKEN }}
+      
       - name: Run Test
         run: npm run test
 
