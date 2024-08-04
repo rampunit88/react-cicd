@@ -2,8 +2,6 @@ import React from 'react';
 import { QueryClient, useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { fetchTodos, addTodo } from '../../../services';
 
-const queryClient = new QueryClient();
-
 const Todos = () => {
   // Queries
   const { data, error, isLoading } = useQuery({ queryKey: ['todos'], queryFn: fetchTodos })
