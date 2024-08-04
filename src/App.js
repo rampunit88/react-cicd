@@ -9,6 +9,7 @@ import Counter from './components/counter/Counter';
 import Todos from './components/counter/todos/Todo';
 
 // Create a client
+// Create a client
 const queryClient = new QueryClient()
 
 function App() {
