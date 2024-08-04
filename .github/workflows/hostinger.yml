@@ -13,14 +13,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: npm install
-      - name: Build and deploy
+      - name: Build project
+        run: npm run build
+      - name: Deploy via FTP
         env:
           HOSTINGER_FTP_HOST: ${{ secrets.HOSTINGER_FTP_HOST }}
           HOSTINGER_FTP_USERNAME: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           HOSTINGER_FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          SUBDOMAIN: subdomain
+          SUBDOMAIN: ${{ secrets.SUBDOMAIN }}
         run: |
-          npm install -g gh-pages
-          gh-pages -d dist -u "Ram Punit <test.punit88@gmail.com>"
-          npm run build
-          gh-pages -d build -r $HOSTINGER_FTP_HOST -u $HOSTINGER_FTP_USERNAME -p $HOSTINGER_FTP_PASSWORD -s $SUBDOMAIN
+          apt-get update && apt-get install -y lftp
+          lftp -e "mirror -R build /public_html/${SUBDOMAIN}; quit" -u $HOSTINGER_FTP_USERNAME,$HOSTINGER_FTP_PASSWORD $HOSTINGER_FTP_HOST
