@@ -25,4 +25,4 @@ jobs:
           SUBDOMAIN: ${{ secrets.SUBDOMAIN }}
         run: |
           apt-get update && apt-get install -y lftp
-          lftp -e "mirror -R build /public_html/${SUBDOMAIN}; quit" -u $HOSTINGER_FTP_USERNAME,$HOSTINGER_FTP_PASSWORD $HOSTINGER_FTP_HOST
+          lftp -e "mirror -R build /public_html/react-app; quit" -u $HOSTINGER_FTP_USERNAME,$HOSTINGER_FTP_PASSWORD $HOSTINGER_FTP_HOST
