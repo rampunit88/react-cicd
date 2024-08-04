@@ -1,5 +1,5 @@
 import React from 'react';
-import { QueryClient, useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { fetchTodos, addTodo } from '../../../services';
 
 const Todos = () => {
