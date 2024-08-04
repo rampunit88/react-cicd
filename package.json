@@ -2,7 +2,7 @@
   "name": "cicd-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rampunit88.github.io/react-cicd",
+  "homepage": "https://react-app.ibdbgs.com",
   "dependencies": {
     "@tanstack/react-query": "^5.51.18",
     "@tanstack/react-query-devtools": "^5.51.18",
