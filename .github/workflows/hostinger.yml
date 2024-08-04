@@ -20,5 +20,6 @@ jobs:
           HOSTINGER_FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           SUBDOMAIN: subdomain
         run: |
+          npm install -g gh-pages
           npm run build
           gh-pages -d build -r $HOSTINGER_FTP_HOST -u $HOSTINGER_FTP_USERNAME -p $HOSTINGER_FTP_PASSWORD -s $SUBDOMAIN
