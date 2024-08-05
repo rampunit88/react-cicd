@@ -234,7 +234,7 @@ export default function Header() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-      <LeftSidebar open={open} setOpen={setOpen} toggleDrawer={toggleDrawer}/>
+      <LeftSidebar open={open} toggleDrawer={toggleDrawer}/>
     </Box>
   );
 }
