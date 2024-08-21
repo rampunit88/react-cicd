@@ -2,13 +2,15 @@
   "name": "cicd-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rampunit88.github.io/react-cicd",
+  "homepage": "/",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@sentry/react": "^8.24.0",
+    "@sentry/tracing": "^7.114.0",
     "@tanstack/react-query": "^5.51.18",
     "@tanstack/react-query-devtools": "^5.51.18",
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,7 +24,8 @@
     "react-router-dom": "^6.26.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.12",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.5.4"
   },
   "scripts": {
     "start": "react-scripts start",

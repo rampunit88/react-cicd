@@ -9,6 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { Link } from 'react-router-dom';
 
 export default function LeftSidebar({open,toggleDrawer}) {
   
@@ -17,6 +18,7 @@ export default function LeftSidebar({open,toggleDrawer}) {
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <Link to={text} key={index}>
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -25,6 +27,7 @@ export default function LeftSidebar({open,toggleDrawer}) {
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />

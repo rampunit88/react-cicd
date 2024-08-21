@@ -34,3 +34,30 @@ fieldset{
     transform: rotate(360deg);
   }
 }
+.books-container{
+  background-color: rgb(152, 234, 226);
+  padding: 2px 5px;
+}
+.list-item{
+  background-color: white;
+  margin: 2px 5px;
+}
+.list-item{
+  display: flex;
+  justify-content: space-between;  
+}
+.list-item-book{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.list-item-book span{
+  width: 100%;
+}
+.btn-grp{
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
